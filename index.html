@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <main class="main">
+        <div class="main_container">
+            <div class="input_container">
+                <div class="inputfield">
+                    <img src="./file-lines-solid.svg" alt="file" class="file">
+                    <input type="text" name="task" class="task" placeholder="Type your task" autofocus id="input"
+                            onkeypress="addTask(event)">
+                    <button ><img src="./arrow-left-solid.svg" alt="arrow" onclick="addTaskOnClick()" class="file"></button>
+                </div>
+                <div class="inputops">
+                    <div class="center"> 
+                        <img src="./check-double-solid.svg" alt="check" class="check">
+                        <p onclick="completeAll()" class="complete">Complete All tasks</p>
+                    </div>
+                    <p onclick="clearCompleted()" class="complete">Clear Completed</p>
+                </div>
+                <div id="task_list">
+                    <ul id="tasks"></ul>
+                </div>
+                <p id="task_left"></p>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>
